@@ -16,7 +16,8 @@ func main() {
 }
 
 func retornaMensagem(c *gin.Context) {
+	value := data.GetOne()
 	c.JSON(200, gin.H{
-		"message": data.Data,
+		"message": value,
 	})
 }
