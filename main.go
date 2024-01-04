@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/gin-gonic/gin"
+	"github.com/vanderloureiro/senha-lembravel-golang/data"
 )
 
 func main() {
@@ -16,6 +17,6 @@ func main() {
 
 func retornaMensagem(c *gin.Context) {
 	c.JSON(200, gin.H{
-		"message": "Senha Lembrável API",
+		"message": data.Data,
 	})
 }
