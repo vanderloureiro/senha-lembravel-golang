@@ -1,9 +1,11 @@
 package data
 
-import "math/rand"
+import (
+	"math/rand"
+)
 
-func GetOne() string {
+func GetRandomWord() string {
 
-	r := rand.Intn(292)
+	r := rand.Intn(len(data))
 	return data[r]
 }

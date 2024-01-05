@@ -16,7 +16,7 @@ func main() {
 }
 
 func retornaMensagem(c *gin.Context) {
-	value := data.GetOne()
+	value := data.GetRandomWord()
 	c.JSON(200, gin.H{
 		"message": value,
 	})
