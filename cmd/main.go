@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/gin-gonic/gin"
-	"github.com/vanderloureiro/senha-lembravel-golang/data"
+	"github.com/vanderloureiro/senha-lembravel-golang/pkg/generator"
 )
 
 func main() {
@@ -16,7 +16,7 @@ func main() {
 }
 
 func retornaMensagem(c *gin.Context) {
-	value := data.GetRandomWord()
+	value := generator.GeneratePassword()
 	c.JSON(200, gin.H{
 		"message": value,
 	})
